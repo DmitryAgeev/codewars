@@ -16,7 +16,7 @@ All input is guaranteed to be valid, i.e. each input string will only ever consi
 """
 
 
-def dna_to_rna(dna:str):
+def dna_to_rna(dna: str):
     return dna.replace('T', 'U')
 
 
