@@ -5,7 +5,7 @@ For example, for [1, 2, 2] it should return 9 because 1^2 + 2^2 + 2^2 = 9.
 """
 
 
-def square_sum(numbers):
+def square_sum(numbers: list):
     return sum(i ** 2 for i in numbers)
 
 
