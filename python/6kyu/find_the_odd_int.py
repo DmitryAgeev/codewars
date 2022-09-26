@@ -16,8 +16,8 @@ from functools import reduce
 
 def find_it(seq: list):
     # reserv = []
-    # for el in seq:  # O(n)
-    #     if el not in reserv:  # O(n)
+    # for el in seq:
+    #     if el not in reserv:
     #         if seq.count(el) % 2:
     #             return el
 
