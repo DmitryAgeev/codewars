@@ -23,7 +23,7 @@ print(is_valid_walk(['w']))
 print(is_valid_walk(['n', 'n', 'n', 's', 'n', 's', 'n', 's', 'n', 's']))
 
 """
-This solution(lowe) seems to be faster but it's actually a lot slower than using built-ins.
+This solution(lower) seems to be faster but it's actually a lot slower than using built-ins.
 
 In this fork (https://www.codewars.com/kumite/5bba68ba8f8bbdc7c7000172?sel=5bba6d117631f0d953000197)
 you can see a comparison of this solution and a "naive solution"
