@@ -15,7 +15,7 @@ Examples (a, b) --> output (explanation)
 """
 
 
-def get_sum(a: int, b: int):
+def get_sum(a: int, b: int) -> int:
     # Gauss sum formula
     # S = (a + b) * (b - a + 1) / 2
     return (a + b) * (abs(a - b) + 1) // 2
