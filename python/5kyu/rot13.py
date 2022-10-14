@@ -8,18 +8,17 @@ Only letters from the latin/english alphabet should be shifted, like in the orig
 
 Please note that using encode is considered cheating.
 """
+from codecs import encode
+from timeit import timeit
 
 
-# import codecs
-#
-#
-# def rot13(message):
-#     return codecs.encode(message, 'rot_13')
+def rot11(message):
+    return encode(message, 'rot_13')
 
 
-# def rot13(message):
-#     return message.translate(message.maketrans('ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz',
-#                                                'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm'))
+def rot12(message):
+    return message.translate(message.maketrans('ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz',
+                                               'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm'))
 
 
 def rot13(message: str) -> str:
@@ -31,3 +30,16 @@ def rot13(message: str) -> str:
 print(rot13('test'))
 print(rot13('Test'))
 print(rot13('aA bB zZ 1234 *!?%'))
+
+print('\n')
+
+print(timeit("rot11('test')", globals=globals(), number=1000000))  # 0.4849136999999999
+print(timeit("rot12('test')", globals=globals(), number=1000000))  # 1.8275175
+print(timeit("rot13('test')", globals=globals(), number=1000000))  # 1.0866005999999997
+
+"""
+ANALYSIS
+.encode solution is fastest, but not legal for that challenge.
+.translate solution is slowest
+index solution in the middle
+"""
